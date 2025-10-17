@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.env
+
+# Instance / local files
+instance/
+*.sqlite3
+
+# Render / build files
+*.egg-info/
