@@ -7,4 +7,4 @@ itsdangerous==2.1.2
 click==8.1.7
 python-dotenv==1.0.0
 requests==2.31.0
-Flask-Login
+Flask-Login=0.6.2
