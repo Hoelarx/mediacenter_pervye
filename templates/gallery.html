@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Галерея мероприятий</h2>
+  <div class="masonry-grid">
+    {% for p in photos %}
+      <div class="masonry-item"><img src="/uploads/{{p.filename}}" alt="photo"></div>
+    {% endfor %}
+  </div>
+{% endblock %}

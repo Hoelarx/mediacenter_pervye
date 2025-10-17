@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+  <section class="banner">
+    <img src="/static/img/banner.svg" alt="Афиша" class="banner-img">
+  </section>
+
+  <section class="news-feed">
+    <h2>Новости</h2>
+    <div class="news-list">
+      {% for n in news %}
+        <article class="news-item">
+          <h3><a href="/news/{{n.id}}">{{ n.title }}</a></h3>
+          <p class="meta">{{ n.created_at.strftime('%d.%m.%Y %H:%M') }}{% if n.category %} - {{n.category}}{% endif %}</p>
+          <p>{{ n.content[:200] }}{% if n.content|length > 200 %}...{% endif %}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="mini-gallery">
+    <h2>Галерея последних</h2>
+    <div class="gallery-strip">
+      {% for p in photos %}
+        <img src="/uploads/{{p.filename}}" alt="photo">
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="projects-list">
+    <h2>Проекты / Направления</h2>
+    <div class="project-cards">
+      {% for c in categories %}
+        <div class="card">{{ c }}</div>
+      {% endfor %}
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ff7a88"/><stop offset="1" stop-color="#ffcf7a"/></linearGradient>
+  </defs>
+  <rect width="1200" height="300" fill="url(#g)" rx="20"/>
+  <text x="60" y="120" font-family="Inter, Arial" font-size="42" fill="#fff">МедиаЦентр Первых</text>
+  <text x="60" y="170" font-family="Inter, Arial" font-size="22" fill="#fff">Новости, проекты, афиши и официальный архив — Ейский район</text>
+</svg>

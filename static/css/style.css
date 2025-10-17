@@ -1,0 +1,37 @@
+:root{
+  --accent:#ff4d6d;
+  --muted:#666;
+  --bg:#fafafa;
+}
+body{font-family:Inter, system-ui, Arial, sans-serif; background:var(--bg); color:#222; margin:0}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;background:linear-gradient(90deg,#fff,#fff)}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{height:64px}
+.brand-text h1{margin:0;font-size:20px}
+.main-nav a{margin-left:12px;text-decoration:none;color:var(--muted)}
+.container{max-width:1100px;margin:18px auto;padding:0 18px}
+.banner-img{width:100%;height:220px;object-fit:cover;border-radius:12px}
+.news-list{display:grid;grid-template-columns:1fr;gap:12px}
+.news-item{background:#fff;padding:12px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.04)}
+.gallery-strip img{height:100px;margin-right:8px;border-radius:6px}
+.project-cards{display:flex;flex-wrap:wrap;gap:10px}
+.card{background:linear-gradient(135deg,var(--accent),#ff9aa2);color:#fff;padding:16px;border-radius:12px}
+.masonry-grid{display:flex;flex-wrap:wrap;gap:8px}
+.masonry-item img{width:240px;height:160px;object-fit:cover;border-radius:8px}
+.site-footer{padding:12px;text-align:center;color:#777}
+.flashes .flash{padding:8px;margin:8px 0;border-radius:6px}
+.flashes .success{background:#e6ffef}
+.flashes .danger{background:#ffe6e6}
+.social-links {
+  margin-bottom: 8px;
+}
+.social-links a img {
+  width: 28px;
+  height: 28px;
+  margin: 0 6px;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+.social-links a img:hover {
+  transform: scale(1.15);
+}

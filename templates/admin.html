@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Панель администратора</h2>
+
+  <section>
+    <h3>Опубликовать новость</h3>
+    <form action="/admin/post_news" method="post">
+      <input name="title" placeholder="Заголовок">
+      <textarea name="content" placeholder="Текст"></textarea>
+      <select name="category">
+        <option value="">Без категории</option>
+        {% for c in ProjectCategory.get_all() %}
+          <option value="{{c}}">{{c}}</option>
+        {% endfor %}
+      </select>
+      <button type="submit">Опубликовать</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Загрузить фото</h3>
+    <form action="/admin/upload_photo" method="post" enctype="multipart/form-data">
+      <input type="file" name="photo">
+      <button type="submit">Загрузить</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Загрузить документ (PDF)</h3>
+    <form action="/admin/upload_doc" method="post" enctype="multipart/form-data">
+      <input type="file" name="doc">
+      <button type="submit">Загрузить</button>
+    </form>
+  </section>
+
+{% endblock %}

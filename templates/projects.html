@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Проекты / Направления</h2>
+  <div class="grid">
+  {% for c in categories %}
+    <section class="proj-card">
+      <h3>{{ c }}</h3>
+      <p>Короткое описание направления. (Можно редактировать в админке)</p>
+    </section>
+  {% endfor %}
+  </div>
+{% endblock %}

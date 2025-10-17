@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+  <article class="news-full">
+    <h2>{{ news.title }}</h2>
+    <p class="meta">{{ news.created_at.strftime('%d.%m.%Y %H:%M') }}</p>
+    <div class="content">{{ news.content|safe }}</div>
+  </article>
+{% endblock %}

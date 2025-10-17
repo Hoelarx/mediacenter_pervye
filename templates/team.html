@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Команда</h2>
+  <div class="team-grid">
+    {% for m in team %}
+      <div class="member-card">
+        <h4>{{ m.full_name or m.username }}</h4>
+        <p>Роль: {{ m.role }}</p>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
